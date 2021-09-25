@@ -12,5 +12,5 @@ This is a fitness app created to add your diet intake, water intake, count numbe
 <img src="https://github.com/sanchitvasdev/HealthZoid/blob/master/Activity%20Calories.jpeg" style="width: 400px; height: 700px">
 <img src="https://github.com/sanchitvasdev/HealthZoid/blob/master/Navigation%20Drawer.jpeg" style="width: 400px; height: 700px">
 <img src="https://github.com/sanchitvasdev/HealthZoid/blob/master/Mystery%20Facts.jpeg" style="width: 400px; height: 700px">
-<img src="https://github.com/sanchitvasdev/HealthZoid/blob/master/Rating.jpegg" style="width: 400px; height: 700px">
+<img src="https://github.com/sanchitvasdev/HealthZoid/blob/master/Rating.jpeg" style="width: 400px; height: 700px">
 
