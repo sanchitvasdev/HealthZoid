@@ -1,0 +1,379 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <variable
+            name="dailyDietViewModel"
+            type="com.sanchit.healthzoid.dailydiet.DailyDietViewModel" />
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/dailyDietLayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".dailydiet.DailyDietFragment">
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/caloriesTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="24dp"
+            android:layout_marginTop="16dp"
+            android:fontFamily="@font/roboto"
+            android:text="@string/calories"
+            android:textColor="@android:color/black"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/caloriesValueTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:fontFamily="@font/roboto"
+            android:text="@{dailyDietViewModel.calories}"
+            app:layout_constraintStart_toEndOf="@id/caloriesTextView"
+            app:layout_constraintTop_toTopOf="@id/caloriesTextView" />
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/caloriesExceededTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="24dp"
+            android:fontFamily="@font/roboto"
+            android:text="@string/limit_exceeded"
+            android:textColor="@color/red"
+            android:visibility="gone"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@id/caloriesValueTextView" />
+
+        <ProgressBar
+            android:id="@+id/caloriesProgressBar"
+            style="?android:attr/progressBarStyleHorizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="24dp"
+            android:layout_marginEnd="24dp"
+            android:progress="@{dailyDietViewModel.caloriesProgress}"
+            android:progressBackgroundTint="@color/primaryLightColor"
+            android:progressTint="@color/primaryLightColor"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/caloriesTextView" />
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/proteinTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="24dp"
+            android:layout_marginTop="8dp"
+            android:fontFamily="@font/roboto"
+            android:text="@string/protein"
+            android:textColor="@android:color/black"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/caloriesProgressBar" />
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/proteinValueTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:fontFamily="@font/roboto"
+            android:text="@{dailyDietViewModel.protein}"
+            app:layout_constraintStart_toEndOf="@id/proteinTextView"
+            app:layout_constraintTop_toTopOf="@id/proteinTextView" />
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/proteinExceededTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="24dp"
+            android:fontFamily="@font/roboto"
+            android:text="@string/limit_exceeded"
+            android:textColor="@color/red"
+            android:visibility="gone"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@id/proteinValueTextView" />
+
+        <ProgressBar
+            android:id="@+id/proteinProgressBar"
+            style="?android:attr/progressBarStyleHorizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="24dp"
+            android:layout_marginEnd="24dp"
+            android:progress="@{dailyDietViewModel.proteinProgress}"
+            android:progressBackgroundTint="@color/yellow"
+            android:progressTint="@color/yellow"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/proteinTextView" />
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/carbsTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="24dp"
+            android:layout_marginTop="8dp"
+            android:fontFamily="@font/roboto"
+            android:text="@string/carbohydrates"
+            android:textColor="@android:color/black"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/proteinProgressBar" />
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/carbsValueTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:fontFamily="@font/roboto"
+            android:text="@{dailyDietViewModel.carbs}"
+            app:layout_constraintStart_toEndOf="@id/carbsTextView"
+            app:layout_constraintTop_toTopOf="@id/carbsTextView" />
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/carbsExceededTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="24dp"
+            android:fontFamily="@font/roboto"
+            android:text="@string/limit_exceeded"
+            android:textColor="@color/red"
+            android:visibility="gone"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@id/carbsValueTextView" />
+
+        <ProgressBar
+            android:id="@+id/carbsProgressBar"
+            style="?android:attr/progressBarStyleHorizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="24dp"
+            android:layout_marginEnd="24dp"
+            android:progress="@{dailyDietViewModel.carbsProgress}"
+            android:progressBackgroundTint="@color/purple"
+            android:progressTint="@color/purple"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/carbsTextView" />
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/fatsTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="24dp"
+            android:layout_marginTop="8dp"
+            android:fontFamily="@font/roboto"
+            android:text="@string/fats"
+            android:textColor="@android:color/black"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/carbsProgressBar" />
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/fatsValueTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:fontFamily="@font/roboto"
+            android:text="@{dailyDietViewModel.fats}"
+            app:layout_constraintStart_toEndOf="@id/fatsTextView"
+            app:layout_constraintTop_toTopOf="@id/fatsTextView" />
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/fatsExceededTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="24dp"
+            android:fontFamily="@font/roboto"
+            android:text="@string/limit_exceeded"
+            android:textColor="@color/red"
+            android:visibility="gone"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@id/fatsValueTextView" />
+
+        <ProgressBar
+            android:id="@+id/fatsProgressBar"
+            style="?android:attr/progressBarStyleHorizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="24dp"
+            android:layout_marginEnd="24dp"
+            android:progress="@{dailyDietViewModel.fatsProgress}"
+            android:progressBackgroundTint="@color/orange"
+            android:progressTint="@color/orange"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/fatsTextView" />
+
+        <View
+            android:id="@+id/divider"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="?android:attr/listDivider"
+            android:backgroundTint="@color/primaryDarkColor"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/fatsProgressBar" />
+
+        <com.google.android.material.imageview.ShapeableImageView
+            android:id="@+id/slideImageView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:onClick="@{() -> dailyDietViewModel.visibilitychange()}"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/fatsProgressBar"
+            app:srcCompat="@drawable/ic_up_arrow" />
+
+
+        <ScrollView
+            android:id="@+id/mealItemsScrollView"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:fillViewport="true"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="8dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/slideImageView">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/constraintLayoutinsideScrollView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <com.google.android.material.textview.MaterialTextView
+                    android:id="@+id/breakfastTextView"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/light_grey"
+                    android:drawableEnd="@drawable/ic_add_button"
+                    android:drawableTint="@android:color/black"
+                    android:fontFamily="@font/roboto"
+                    android:gravity="center"
+                    android:paddingTop="4dp"
+                    android:paddingBottom="4dp"
+                    android:text="@string/breakfast"
+                    android:textAppearance="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense"
+                    android:textColor="@android:color/black"
+                    android:textSize="18sp"
+                    android:textStyle="bold"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/breakfastRecyclerView"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    tools:listitem="@layout/mealitem"
+                    app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+                    app:layout_constraintBottom_toTopOf="@id/lunchTextView"
+                    app:layout_constraintTop_toBottomOf="@id/breakfastTextView"
+                    tools:itemCount="5" />
+
+                <com.google.android.material.textview.MaterialTextView
+                    android:id="@+id/lunchTextView"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:background="@color/light_grey"
+                    android:drawableEnd="@drawable/ic_add_button"
+                    android:drawableTint="@android:color/black"
+                    android:fontFamily="@font/roboto"
+                    android:gravity="center"
+                    android:paddingTop="4dp"
+                    android:paddingBottom="4dp"
+                    android:text="@string/lunch"
+                    android:textAppearance="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense"
+                    android:textColor="@android:color/black"
+                    android:textSize="18sp"
+                    android:textStyle="bold"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/breakfastRecyclerView" />
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/lunchRecyclerView"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    tools:listitem="@layout/mealitem"
+                    android:nestedScrollingEnabled="false"
+                    app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+                    app:layout_constraintTop_toBottomOf="@id/lunchTextView"
+                    tools:itemCount="5" />
+
+                <com.google.android.material.textview.MaterialTextView
+                    android:id="@+id/snacksTextView"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:background="@color/light_grey"
+                    android:drawableEnd="@drawable/ic_add_button"
+                    android:drawableTint="@android:color/black"
+                    android:fontFamily="@font/roboto"
+                    android:gravity="center"
+                    android:paddingTop="4dp"
+                    android:paddingBottom="4dp"
+                    android:text="@string/snacks"
+                    android:textAppearance="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense"
+                    android:textColor="@android:color/black"
+                    android:textSize="18sp"
+                    android:textStyle="bold"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/lunchRecyclerView" />
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/snacksRecyclerView"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    tools:listitem="@layout/mealitem"
+                    android:nestedScrollingEnabled="false"
+                    app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+                    app:layout_constraintTop_toBottomOf="@id/snacksTextView"
+                    tools:itemCount="5" />
+
+                <com.google.android.material.textview.MaterialTextView
+                    android:id="@+id/dinnerTextView"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:background="@color/light_grey"
+                    android:drawableEnd="@drawable/ic_add_button"
+                    android:drawableTint="@android:color/black"
+                    android:fontFamily="@font/roboto"
+                    android:gravity="center"
+                    android:paddingTop="4dp"
+                    android:paddingBottom="4dp"
+                    android:text="@string/dinner"
+                    android:textAppearance="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense"
+                    android:textColor="@android:color/black"
+                    android:textSize="18sp"
+                    android:textStyle="bold"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/snacksRecyclerView" />
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/dinnerRecyclerView"
+                    android:layout_width="match_parent"
+                    android:nestedScrollingEnabled="false"
+                    android:layout_height="wrap_content"
+                    tools:listitem="@layout/mealitem"
+                    app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+                    app:layout_constraintTop_toBottomOf="@id/dinnerTextView"
+                    tools:itemCount="5" />
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+        </ScrollView>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

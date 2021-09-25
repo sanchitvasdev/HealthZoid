@@ -1,0 +1,158 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+        <variable
+            name="food"
+            type="com.sanchit.healthzoid.database.LunchMealItem" />
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp">
+
+        <com.google.android.material.card.MaterialCardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:elevation="5dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:shapeAppearance="@style/CustomMediumShapeAppearance"
+            app:strokeColor="@android:color/black"
+            app:strokeWidth="1dp">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="4dp">
+
+                <com.google.android.material.imageview.ShapeableImageView
+                    android:id="@+id/foodItemImageView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="8dp"
+                    android:scaleType="fitCenter"
+                    app:lunchfoodImage="@{food}"
+                    android:contentDescription="@string/foodimageview"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:srcCompat="@mipmap/ic_dairy_products_round" />
+
+                <com.google.android.material.textview.MaterialTextView
+                    android:id="@+id/foodItemTitleTextView"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="16dp"
+                    android:layout_marginEnd="32dp"
+                    android:layout_marginTop="8dp"
+                    android:textSize="16sp"
+                    android:textStyle="bold"
+                    app:lunchfoodTitle="@{food}"
+                    android:textColor="@android:color/black"
+                    android:text="@string/food_title"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toEndOf="@id/foodItemImageView"
+                    app:layout_constraintTop_toTopOf="parent"/>
+
+                <com.google.android.material.textview.MaterialTextView
+                    android:id="@+id/foodItemQuantityTextView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="12sp"
+                    app:lunchfoodQuantity="@{food}"
+                    android:textStyle="bold"
+                    android:layout_marginTop="4dp"
+                    android:text="100 g"
+                    app:layout_constraintStart_toStartOf="@id/foodItemTitleTextView"
+                    app:layout_constraintEnd_toStartOf="@id/divider2"
+                    app:layout_constraintTop_toBottomOf="@id/foodItemTitleTextView" />
+
+
+                <View
+                    android:id="@+id/divider2"
+                    android:backgroundTint="@android:color/black"
+                    android:layout_marginStart="24dp"
+                    app:layout_constraintStart_toEndOf="@id/foodItemQuantityTextView"
+                    app:layout_constraintTop_toTopOf="@id/foodItemQuantityTextView"
+                    app:layout_constraintBottom_toBottomOf="@id/foodItemQuantityTextView"
+                    android:layout_width="2dp"
+                    android:layout_height="0dp"
+                    android:background="?android:attr/listDivider" />
+
+                <com.google.android.material.textview.MaterialTextView
+                    android:id="@+id/foodItemCaloriesTextView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="12sp"
+                    android:textStyle="bold"
+                    app:lunchfoodCalories="@{food}"
+                    android:layout_marginStart="24dp"
+                    android:text="120 Kcals"
+                    app:layout_constraintStart_toEndOf="@id/divider2"
+                    app:layout_constraintTop_toTopOf="@id/foodItemQuantityTextView"/>
+
+                <com.google.android.material.textview.MaterialTextView
+                    android:id="@+id/foodItemProteinTextView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="12sp"
+                    android:layout_marginTop="4dp"
+                    android:textColor="@android:color/black"
+                    android:padding="4dp"
+                    android:text="Protein: 5 g"
+                    app:lunchfoodProtein="@{food}"
+                    android:textStyle="bold"
+                    android:backgroundTint="@color/yellow"
+                    android:background="@color/yellow"
+                    android:textAppearance="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                    app:layout_constraintTop_toBottomOf="@id/foodItemQuantityTextView"
+                    app:layout_constraintStart_toStartOf="@id/foodItemTitleTextView" />
+
+                <com.google.android.material.textview.MaterialTextView
+                    android:id="@+id/foodItemCarbsTextView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="12sp"
+                    android:textColor="@android:color/black"
+                    android:padding="4dp"
+                    android:textStyle="bold"
+                    app:lunchfoodCarbs="@{food}"
+                    android:text="Carbs: 5 g"
+                    android:layout_marginStart="8dp"
+                    android:backgroundTint="@color/purple"
+                    android:background="@color/purple"
+                    android:textAppearance="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                    app:layout_constraintTop_toTopOf="@id/foodItemProteinTextView"
+                    app:layout_constraintStart_toEndOf="@id/foodItemProteinTextView"
+                    app:layout_constraintBottom_toBottomOf="@id/foodItemProteinTextView"/>
+
+                <com.google.android.material.textview.MaterialTextView
+                    android:id="@+id/foodItemFatsTextView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="12sp"
+                    android:textColor="@android:color/black"
+                    android:padding="4dp"
+                    android:text="Fats: 5 g"
+                    app:lunchfoodFats="@{food}"
+                    android:textStyle="bold"
+                    android:layout_marginStart="8dp"
+                    android:backgroundTint="@color/lightorange"
+                    android:background="@color/lightorange"
+                    android:textAppearance="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                    app:layout_constraintTop_toTopOf="@id/foodItemProteinTextView"
+                    app:layout_constraintStart_toEndOf="@id/foodItemCarbsTextView"
+                    app:layout_constraintBottom_toBottomOf="@id/foodItemProteinTextView"/>
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+        </com.google.android.material.card.MaterialCardView>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

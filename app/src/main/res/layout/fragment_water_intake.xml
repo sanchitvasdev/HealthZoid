@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:app="http://schemas.android.com/apk/res-auto">
+    <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".waterintake.WaterIntakeFragment">
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/waterEditText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toTopOf="parent"
+            app:hintTextColor="@color/primaryLightColor"
+            app:boxStrokeColor="@color/primaryLightColor"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+            android:layout_marginEnd="16dp"
+            android:layout_marginTop="48dp"
+            android:layout_marginStart="16dp">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/waterEditTextChange"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:drawableEnd="@drawable/mlimage"
+                android:hint="Enter water content taken"
+                android:inputType="number"
+                android:maxLength="9"
+                android:textSize="18sp"/>
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.imageview.ShapeableImageView
+            android:id="@+id/bottleImageView1"
+            android:layout_width="24dp"
+            android:layout_height="72dp"
+            android:layout_marginTop="64dp"
+            app:srcCompat="@drawable/empty_bottle_image"
+            app:layout_constraintHorizontal_chainStyle="spread"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toStartOf="@id/bottleImageView2"
+            app:layout_constraintTop_toBottomOf="@id/waterEditText"/>
+
+        <com.google.android.material.imageview.ShapeableImageView
+            android:id="@+id/bottleImageView2"
+            android:layout_width="24dp"
+            android:layout_height="72dp"
+            app:srcCompat="@drawable/empty_bottle_image"
+            app:layout_constraintTop_toTopOf="@id/bottleImageView1"
+            app:layout_constraintStart_toEndOf="@id/bottleImageView1"
+            app:layout_constraintEnd_toStartOf="@id/bottleImageView3"
+            app:layout_constraintTop_toBottomOf="@id/waterEditText"/>
+
+        <com.google.android.material.imageview.ShapeableImageView
+            android:id="@+id/bottleImageView3"
+            android:layout_width="24dp"
+            android:layout_height="72dp"
+            app:srcCompat="@drawable/empty_bottle_image"
+            app:layout_constraintTop_toTopOf="@id/bottleImageView1"
+            app:layout_constraintStart_toEndOf="@id/bottleImageView2"
+            app:layout_constraintEnd_toStartOf="@id/bottleImageView4"
+            app:layout_constraintTop_toBottomOf="@id/waterEditText"/>
+
+        <com.google.android.material.imageview.ShapeableImageView
+            android:id="@+id/bottleImageView4"
+            android:layout_width="24dp"
+            android:layout_height="72dp"
+            app:srcCompat="@drawable/empty_bottle_image"
+            app:layout_constraintTop_toTopOf="@id/bottleImageView1"
+            app:layout_constraintEnd_toStartOf="@id/bottleImageView5"
+            app:layout_constraintStart_toEndOf="@id/bottleImageView3"
+            app:layout_constraintTop_toBottomOf="@id/waterEditText"/>
+
+        <com.google.android.material.imageview.ShapeableImageView
+            android:id="@+id/bottleImageView5"
+            android:layout_width="24dp"
+            android:layout_height="72dp"
+            app:srcCompat="@drawable/empty_bottle_image"
+            app:layout_constraintTop_toTopOf="@id/bottleImageView1"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@id/bottleImageView4"
+            app:layout_constraintTop_toBottomOf="@id/waterEditText"/>
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/currentWaterContentTextView"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginTop="64dp"
+            android:textColor="@android:color/black"
+            android:textSize="20sp"
+            android:text="Your today's water content is : 0 ml"
+            android:textStyle="bold"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toBottomOf="@id/bottleImageView1"/>
+
+        <com.google.android.material.imageview.ShapeableImageView
+            android:id="@+id/progressImageView"
+            android:layout_width="96dp"
+            android:layout_height="96dp"
+            android:layout_marginTop="24dp"
+            app:layout_constraintStart_toStartOf="@id/progressInformationImageView"
+            app:layout_constraintEnd_toEndOf="@id/progressInformationImageView"
+            app:srcCompat="@drawable/poor_water_content"
+            app:layout_constraintTop_toBottomOf="@id/currentWaterContentTextView"/>
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/progressInformationImageView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="24sp"
+            android:textColor="@color/red"
+            android:layout_marginTop="24dp"
+            android:text="Please drink some water!!"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/progressImageView"/>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

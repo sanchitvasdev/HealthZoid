@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".goalcalories.GoalCaloriesFragment">
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/currentBodyWeightLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="32dp"
+            android:layout_marginTop="40dp"
+            android:layout_marginEnd="32dp"
+            app:boxStrokeColor="@color/primaryLightColor"
+            app:hintTextColor="@color/primaryLightColor"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/currentBodyWeightEditText"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:maxLength="6"
+                android:textSize="18sp"
+                android:inputType="numberDecimal"
+                android:hint="Enter your current body weight"/>
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/targetBodyWeightLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="32dp"
+            android:layout_marginTop="40dp"
+            android:layout_marginEnd="32dp"
+            app:boxStrokeColor="@color/primaryLightColor"
+            app:hintTextColor="@color/primaryLightColor"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+            app:layout_constraintTop_toBottomOf="@id/currentBodyWeightLayout">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/targetBodyWeightEditText"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:maxLength="6"
+                android:textSize="18sp"
+                android:inputType="numberDecimal"
+                android:hint="Enter your target body weight"/>
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/targetWeeksLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="32dp"
+            android:layout_marginTop="40dp"
+            android:layout_marginEnd="32dp"
+            app:boxStrokeColor="@color/primaryLightColor"
+            app:hintTextColor="@color/primaryLightColor"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+            app:layout_constraintTop_toBottomOf="@id/targetBodyWeightLayout">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/targetWeeksEditText"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:maxLength="3"
+                android:textSize="18sp"
+                android:inputType="number"
+                android:digits="123456789"
+                android:hint="Number of weeks targeted"/>
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/teeLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="32dp"
+            android:layout_marginTop="40dp"
+            android:layout_marginEnd="32dp"
+            app:boxStrokeColor="@color/primaryLightColor"
+            app:hintTextColor="@color/primaryLightColor"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+            app:layout_constraintTop_toBottomOf="@id/targetWeeksLayout">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/teeEditText"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:maxLength="6"
+                android:textSize="18sp"
+                android:drawableEnd="@drawable/ic_todays_fact"
+                android:inputType="numberDecimal"
+                android:hint="Your TEE"/>
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/calculateButton2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Calculate"
+            android:textColor="#FFFFFF"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/teeLayout"
+            android:layout_marginTop="40dp"/>
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/goalCaloriesTextView"
+            android:layout_width="0dp"
+            android:gravity="center"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="24dp"
+            android:textColor="@android:color/black"
+            android:textStyle="bold"
+            android:textSize="20sp"
+            android:fontFamily="@font/roboto"
+            android:text="@string/your_goal_calories_are_0_00_kcal"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/calculateButton2"/>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

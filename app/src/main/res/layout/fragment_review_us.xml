@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+        <variable
+            name="viewModel"
+            type="com.sanchit.healthzoid.reviewus.ReviewUsViewModel" />
+    </data>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        tools:context=".reviewus.ReviewUsFragment">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/yourRatingTextView"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="Your rating : "
+                android:textSize="32sp"
+                android:fontFamily="@font/roboto"
+                android:textStyle="bold"
+                android:textColor="@android:color/black"
+                android:layout_marginTop="40dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintStart_toStartOf="parent"/>
+
+            <androidx.appcompat.widget.AppCompatRatingBar
+                android:id="@+id/ratingBar"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="32dp"
+                android:rating="3"
+                android:scaleX="0.9"
+                android:scaleY="0.9"
+                android:secondaryProgressTint="#FF0c6037"
+                android:progressTint="#FF0c6037"
+                android:progressBackgroundTint="#AA5ec082"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/yourRatingTextView"/>
+
+            <com.google.android.gms.common.SignInButton
+                android:id="@+id/signInButton"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="40dp"
+                android:layout_marginStart="32dp"
+                android:layout_marginEnd="32dp"
+                app:layout_constraintTop_toBottomOf="@id/ratingBar"/>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/nameLayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="32dp"
+                android:layout_marginEnd="32dp"
+                android:layout_marginTop="40dp"
+                app:hintTextColor="@color/primaryLightColor"
+                app:boxStrokeColor="@color/primaryLightColor"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                app:layout_constraintTop_toBottomOf="@id/signInButton">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/nameEditText"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:inputType="text"
+                    android:textSize="18sp"
+                    android:fontFamily="@font/roboto"
+                    android:hint="Enter your name"
+                    android:maxLength="45"/>
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/reviewLayout"
+                android:layout_width="0dp"
+                android:layout_height="250dp"
+                android:layout_marginTop="48dp"
+                app:layout_constraintStart_toStartOf="@id/nameLayout"
+                app:layout_constraintEnd_toEndOf="@id/nameLayout"
+                app:boxStrokeColor="@color/primaryLightColor"
+                app:hintTextColor="@color/primaryLightColor"
+                app:layout_constraintTop_toBottomOf="@id/nameLayout"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/reviewEditText"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:gravity="top|start"
+                    android:fontFamily="@font/roboto"
+                    android:textSize="20sp"
+                    android:maxLength="250"
+                    android:inputType="textMultiLine"
+                    android:hint="Write your review"/>
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/wordsTextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="14sp"
+                android:textStyle="bold"
+                android:layout_marginTop="8dp"
+                android:text="@{@string/words(viewModel.numOfWords)}"
+                android:fontFamily="@font/roboto"
+                android:textColor="@android:color/black"
+                app:layout_constraintEnd_toEndOf="@id/reviewLayout"
+                app:layout_constraintTop_toBottomOf="@id/reviewLayout"/>
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/doneButton"
+                android:layout_width="130dp"
+                android:layout_height="50dp"
+                android:text="Done"
+                android:textSize="18sp"
+                android:layout_marginTop="40dp"
+                android:textStyle="bold"
+                android:textColor="@android:color/white"
+                app:layout_constraintTop_toBottomOf="@id/wordsTextView"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </ScrollView>
+
+</layout>

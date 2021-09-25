@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/todayFactFragment"
+        tools:context=".facts.FactsFragment">
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/didYouKnowTextView"
+            android:layout_width="0dp"
+            android:text="@string/did_you_know"
+            android:textSize="36sp"
+            android:textStyle="bold"
+            android:fontFamily="@font/roboto"
+            android:textColor="@color/primaryColor"
+            android:layout_marginTop="8dp"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"/>
+
+        <org.imaginativeworld.whynotimagecarousel.ImageCarousel
+            android:id="@+id/carousel"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_marginTop="8dp"
+            app:showTopShadow="true"
+            app:topShadowAlpha="0.6"
+            app:showBottomShadow="true"
+            app:bottomShadowAlpha="0.6"
+            app:showCaption="false"
+            app:showNavigationButtons="true"
+            app:imagePlaceholder="@drawable/ic_todays_fact"
+            app:showIndicator="false"
+            app:imageScaleType="fitCenter"
+            app:carouselType="BLOCK"
+            app:scaleOnScroll="false"
+            app:scalingFactor="0.15"
+            app:autoWidthFixing="true"
+            app:autoPlay="false"
+            app:autoPlayDelay="2000"
+            app:carouselBackground="@color/light_grey"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/didYouKnowTextView"/>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

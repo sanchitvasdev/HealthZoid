@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/acttivity_main_navigation"
+    app:startDestination="@id/dailyDietFragment">
+
+    <fragment
+        android:id="@+id/dailyDietFragment"
+        android:name="com.sanchit.healthzoid.dailydiet.DailyDietFragment"
+        android:label="DailyDietFragment" >
+        <action
+            android:id="@+id/action_dailyDietFragment_to_foodsFragment"
+            app:destination="@id/foodsFragment"
+            app:enterAnim="@anim/fade_in"
+            app:exitAnim="@anim/fade_out"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_in_right" />
+    </fragment>
+    <fragment
+        android:id="@+id/foodsFragment"
+        android:name="com.sanchit.healthzoid.foods.FoodsFragment"
+        android:label="fragment_foods"
+        tools:layout="@layout/fragment_foods" >
+        <argument
+            android:name="timeOfFood"
+            app:argType="long" />
+        <action
+            android:id="@+id/action_foodsFragment_to_dailyDietFragment"
+            app:destination="@id/dailyDietFragment"
+            app:enterAnim="@anim/fade_in"
+            app:exitAnim="@anim/fade_out"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_in_right" />
+    </fragment>
+    <fragment
+        android:id="@+id/stepTrackerFragment"
+        android:name="com.sanchit.healthzoid.steptracker.StepTrackerFragment"
+        android:label="StepTrackerFragment"
+        tools:layout="@layout/fragment_step_tracker"/>
+    <fragment
+        android:id="@+id/bodyFatPercentCalculatorFragment"
+        android:name="com.sanchit.healthzoid.bodyfatpercentcalculator.BodyFatPercentCalculatorFragment"
+        android:label="fragment_body_fat_percent_calculator"
+        tools:layout="@layout/fragment_body_fat_percent_calculator" />
+    <fragment
+        android:id="@+id/activityCaloriesFragment"
+        android:name="com.sanchit.healthzoid.activitycalories.ActivityCaloriesFragment"
+        android:label="fragment_activity_calories"
+        tools:layout="@layout/fragment_activity_calories" />
+    <fragment
+        android:id="@+id/goalCaloriesFragment"
+        android:name="com.sanchit.healthzoid.goalcalories.GoalCaloriesFragment"
+        android:label="fragment_goal_calories"
+        tools:layout="@layout/fragment_goal_calories" >
+        <action
+            android:id="@+id/action_goalCaloriesFragment_to_yourBmrAndTeeFragment"
+            app:destination="@id/yourBmrAndTeeFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/reviewUsFragment"
+        android:name="com.sanchit.healthzoid.reviewus.ReviewUsFragment"
+        android:label="fragment_settings"
+        tools:layout="@layout/fragment_review_us">
+        <action
+            android:id="@+id/action_reviewUsFragment_to_dailyDietFragment"
+            app:destination="@id/dailyDietFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/todaysFactFragment"
+        android:name="com.sanchit.healthzoid.facts.FactsFragment"
+        android:label="fragment_todays_fact"
+        tools:layout="@layout/fragment_facts" />
+    <fragment
+        android:id="@+id/volumeCalculatorFragment"
+        android:name="com.sanchit.healthzoid.volumecalculator.VolumeCalculatorFragment"
+        android:label="fragment_volume_calculator"
+        tools:layout="@layout/fragment_volume_calculator" />
+    <fragment
+        android:id="@+id/waterIntakeFragment"
+        android:name="com.sanchit.healthzoid.waterintake.WaterIntakeFragment"
+        android:label="fragment_water_intake"
+        tools:layout="@layout/fragment_water_intake" />
+    <fragment
+        android:id="@+id/yourBmrAndTeeFragment"
+        android:name="com.sanchit.healthzoid.yourbmrandtee.YourBmrAndTeeFragment"
+        android:label="fragment_your_bmr_and_tee"
+        tools:layout="@layout/fragment_your_bmr_and_tee" />
+</navigation>

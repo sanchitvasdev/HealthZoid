@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <group android:id="@+id/group1">
+        <item
+            android:id="@+id/dailyDietFragment"
+            android:title="@string/daily_diet"
+            android:icon="@drawable/ic_daily_diet"
+            android:checkable="true"/>
+
+        <item
+            android:id="@+id/waterIntakeFragment"
+            android:title="@string/water_intake"
+            android:icon="@drawable/ic_water_intake"
+            android:checkable="true"/>
+
+        <item
+            android:id="@+id/bodyFatPercentCalculatorFragment"
+            android:title="@string/body_fat_percent_calculator"
+            android:icon="@drawable/ic_body_fat_percent_calculator"
+            android:checkable="true"/>
+
+        <item
+            android:id="@+id/stepTrackerFragment"
+            android:title="@string/step_tracker"
+            android:icon="@drawable/ic_step_tracker"
+            android:checkable="true"/>
+
+        <item
+            android:id="@+id/goalCaloriesFragment"
+            android:title="@string/goal_calories"
+            android:icon="@drawable/ic_goal_calories"
+            android:checkable="true"/>
+
+        <item
+            android:id="@+id/yourBmrAndTeeFragment"
+            android:title="@string/your_bmr_and_tee"
+            android:icon="@drawable/ic_your_bmr_and_tee"
+            android:checkable="true"/>
+
+        <item
+            android:id="@+id/volumeCalculatorFragment"
+            android:title="@string/volume_calculator"
+            android:icon="@drawable/ic_volume_calculator"
+            android:checkable="true"/>
+
+        <item
+            android:id="@+id/activityCaloriesFragment"
+            android:title="@string/activity_calories"
+            android:icon="@drawable/ic_activity_calories"
+            android:checkable="true"/>
+    </group>
+</menu>
