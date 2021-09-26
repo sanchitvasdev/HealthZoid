@@ -2,7 +2,7 @@
 <h3>This is a fitness app created to add your diet intake, water intake, count number of steps walked in a day, calculate calories burned doing some particular activities and much more. Below are some of the glimpses of the app:</h3>
 
 <h4>Add your daily diet using the 'add' icon.</h4>
-<img src="https://github.com/sanchitvasdev/HealthZoid/blob/master/Daily%20intake%201.jpeg" style="width: 400px; height: 700px; margin-end: 10;"><img src="https://github.com/sanchitvasdev/HealthZoid/blob/master/Daily%20intake%202.jpeg" style="width: 400px; height: 700px">
+<img src="https://github.com/sanchitvasdev/HealthZoid/blob/master/Daily%20intake%201.jpeg" style="width: 400px; height: 700px; margin-right: 5;"><img src="https://github.com/sanchitvasdev/HealthZoid/blob/master/Daily%20intake%202.jpeg" style="width: 400px; height: 700px">
 <img src="https://github.com/sanchitvasdev/HealthZoid/blob/master/Water%20Intake%201.jpeg" style="width: 400px; height: 700px">
 <img src="https://github.com/sanchitvasdev/HealthZoid/blob/master/Water%20intake%202.jpeg" style="width: 400px; height: 700px">
 <img src="https://github.com/sanchitvasdev/HealthZoid/blob/master/Body%20fat%20percentage%20calculator.jpeg" style="width: 400px; height: 700px">
