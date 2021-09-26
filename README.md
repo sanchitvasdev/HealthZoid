@@ -1,14 +1,15 @@
 <h1>HealthZoid</h1>
 <h3>This is a fitness app created to add your diet intake, water intake, count number of steps walked in a day, calculate calories burned doing some particular activities and much more. Below are some of the glimpses of the app:</h3>
 
-<h3><i>Add your daily diet using the 'add' icon.</i></h3>
+<h3><i>You can add your daily diet using the 'add' icon.</i></h3>
 <br>
 <img src="https://github.com/sanchitvasdev/HealthZoid/blob/master/Daily%20intake%201.jpeg" style="width: 350px; height: 700px;">
 <img src="https://github.com/sanchitvasdev/HealthZoid/blob/master/Daily%20intake%202.jpeg" style="width: 350px; height: 700px">
-<h3>Add your daily water intake.</h3>
+<h3><i>You can add your daily water intake.</i></h3>
 <br>
 <img src="https://github.com/sanchitvasdev/HealthZoid/blob/master/Water%20Intake%201.jpeg" style="width: 350px; height: 700px">
 <img src="https://github.com/sanchitvasdev/HealthZoid/blob/master/Water%20intake%202.jpeg" style="width: 350px; height: 700px">
+<h3><i>Add your daily water intake.</i></h3>
 <img src="https://github.com/sanchitvasdev/HealthZoid/blob/master/Body%20fat%20percentage%20calculator.jpeg" style="width: 350px; height: 700px">
 <img src="https://github.com/sanchitvasdev/HealthZoid/blob/master/Goal%20calories.jpeg" style="width: 350px; height: 700px">
 <img src="https://github.com/sanchitvasdev/HealthZoid/blob/master/BMR%20and%20TEE.jpeg" style="width: 350px; height: 700px">
