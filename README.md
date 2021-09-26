@@ -1,12 +1,12 @@
 <h1>HealthZoid</h1>
 <h3>This is a fitness app created to add your diet intake, water intake, count number of steps walked in a day, calculate calories burned doing some particular activities and much more. Below are some of the glimpses of the app:</h3>
 
-<h4>Add your daily diet using the 'add' icon.</h4>
+<h3>Add your daily diet using the 'add' icon.</h3>
 <br>
 <img src="https://github.com/sanchitvasdev/HealthZoid/blob/master/Daily%20intake%201.jpeg" style="width: 350px; height: 700px;">
 <img src="https://github.com/sanchitvasdev/HealthZoid/blob/master/Daily%20intake%202.jpeg" style="width: 350px; height: 700px">
 <br>
-<h4>Add your daily water intake.</h4>
+<h3>Add your daily water intake.</h3>
 <br>
 <img src="https://github.com/sanchitvasdev/HealthZoid/blob/master/Water%20Intake%201.jpeg" style="width: 350px; height: 700px">
 <img src="https://github.com/sanchitvasdev/HealthZoid/blob/master/Water%20intake%202.jpeg" style="width: 350px; height: 700px">
