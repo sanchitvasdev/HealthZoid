@@ -5,7 +5,6 @@
 <br>
 <img src="https://github.com/sanchitvasdev/HealthZoid/blob/master/Daily%20intake%201.jpeg" style="width: 350px; height: 700px;">
 <img src="https://github.com/sanchitvasdev/HealthZoid/blob/master/Daily%20intake%202.jpeg" style="width: 350px; height: 700px">
-<br>
 <h3>Add your daily water intake.</h3>
 <br>
 <img src="https://github.com/sanchitvasdev/HealthZoid/blob/master/Water%20Intake%201.jpeg" style="width: 350px; height: 700px">
